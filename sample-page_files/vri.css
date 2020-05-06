@@ -1,0 +1,568 @@
+.vri-overlay {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1040;
+    background: rgb(69, 72, 77);
+    background: -moz-radial-gradient(center, ellipse cover, #222325 0%, #181818, 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #222325 0%, #181818 100%);
+    background: radial-gradient(ellipse at center, #222325 0%, #181818 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#222325', endColorstr='#181818', GradientType=1);
+    transition: all 0.5s ease-in-out;
+}
+
+.vri {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.vri .main-video > div,
+.vri .height-100 {
+    height: 100%;
+}
+
+.vri .main-video .container-video .video-label {
+    background: rgba(0, 0, 0, 0.75);
+    border-bottom-right-radius: 5px;
+    color: #ddd;
+    padding: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.vri .miniatures-container {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.vri .miniatures {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-flow: column wrap-reverse;
+    height: 90vh;
+}
+
+.vri .miniatures > div {
+    position: relative;
+    margin: 1vw 0.4vh 0;
+    width: 10vw;
+    flex: 0 1 auto;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .vri .miniatures > div {
+        width: 20vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .vri .miniatures > div {
+        width: 19vw;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .vri .miniatures > div {
+        width: 18vw;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .vri .miniatures > div {
+        width: 15vw;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .vri .miniatures > div {
+        width: 13vw;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1600px and up) */
+@media only screen and (min-width: 1600px) {
+    .vri .miniatures > div {
+        width: 11vw;
+    }
+}
+
+/**
+ * VH and VW units can cause issues on iOS devices: http://caniuse.com/#feat=viewport-units
+ *
+ * To overcome this, create media queries that target the width, height, and orientation of iOS devices.
+ * It isn't optimal, but there is really no other way to solve the problem.
+ *
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+    .vri .miniatures > div {
+        width: 150px;
+    }
+}
+
+/**
+ * iPad with landscape orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+    .vri .miniatures > div {
+        width: 150px;
+    }
+}
+
+
+  .vri .miniatures .container-video {
+      border-radius: 3px;
+      overflow: hidden;
+  }
+
+  .vri .miniatures .container-video.horizontal {
+      max-height: 120px;
+  }
+
+  .vri .miniatures .container-video.vertical {
+      max-height: 200px;
+  }
+
+.vri .miniatures .container-video .video-holder {
+    background: #000;
+    height: 100%;
+}
+
+.vri .video-holder {
+    height: 100vh;
+}
+
+  .vri .miniatures .container-video video {
+      margin-bottom: -5px;
+      object-fit: cover;
+      object-position: center;
+  }
+
+  .vri .miniatures .container-video.vertical video {
+      height: 150px;
+  }
+
+  .vri .miniatures .container-video video {
+      border-radius: 3px;
+      width: 100%;
+  }
+
+    .vri .miniatures > div {
+        display: block;
+        margin: 10px 10px 0;
+        position: relative;
+    }
+
+    .vri .miniatures .container-video .video-label {
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+        text-shadow: 0 0 5px #333;
+        color: #ddd;
+        padding: 0 5px;
+        font-size: 0.8em;
+        white-space: nowrap;
+        word-wrap: break-word;
+        position: absolute;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        box-sizing: border-box;
+        width: 100%;
+        z-index: 1;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+  .vri .miniatures .container-video .participant-controls {
+      position: absolute;
+      opacity: 0.25;
+      bottom: 0;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#bf000000', GradientType=0);
+      width: 100%;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      padding: 15px 0 2px;
+  }
+
+  .vri .miniatures .container-video:hover .participant-controls {
+      opacity: 1;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+  }
+
+  .vri .miniatures .container-video .participant-controls a {
+      color: #ddd;
+      margin: 0 10px;
+      text-shadow: 0 0 3px #000;
+  }
+
+  .vri .vri-controls a:hover,
+  .vri .miniatures .container-video .participant-controls a:hover {
+      color: #fff;
+      text-decoration: none;
+      text-shadow: 0 0 3px #ddd;
+  }
+
+  .vri .vri-controls a.cmd-widget-close:hover {
+      color: #fff;
+      text-decoration: none;
+      text-shadow: 0 0 3px #e61919;
+  }
+
+  .vri .video-controls {
+      text-align: center;
+      width: 100%;
+      font-size: 12px;
+      color: white;
+      display: none;
+  }
+
+  .vri .video-controls {
+      background: whitesmoke;
+  }
+
+  .vri .video-controls .btn {
+      width: 85px;
+      background: whitesmoke;
+  }
+
+  .vri .video-controls:hover {
+      display: block;
+  }
+
+  .vri .controls:hover .video-controls {
+      display: none;
+  }
+
+  .vri .local video {
+      transform: scaleX(-1);
+      -webkit-transform: scaleX(-1); /* Safari and Chrome */
+    -moz-transform: scaleX(-1); /* Firefox */
+}
+
+.vri .main-video .container-video.local .participant-controls {
+    display: none;
+}
+
+.vri .main-video video {
+    height: 100%;
+    width: 100%;
+}
+
+.vri .cover {
+    object-fit: cover;
+}
+
+.vri .vri-controls-wrapper {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.vri .vri-controls-wrapper .vri-company {
+    display: inline-block;
+}
+
+.vri .vri-controls-container .vri-company h4 {
+    line-height: 32px;
+    vertical-align: bottom;
+}
+
+.vri .vri-controls-wrapper .vri-controls-container {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.vri .vri-controls-wrapper .vri-controls-container .vri-controls {
+    display: inline-block;
+    border-left: 1px solid #999;
+    margin-left: 10px;
+    padding-left: 10px;
+    font-size: 28px;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: bottom;
+}
+
+.vri .vri-controls-wrapper .vri-controls-container .vri-mainvideo-controls {
+    display: inline-block;
+}
+
+.vri .vri-controls-wrapper .vri-controls-container a {
+    color: #ddd;
+    margin: 0 12px;
+}
+
+.vri .vri-controls-wrapper .vri-controls-container a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.vri .vri-progress-bar {
+    background: rgba(0, 0, 0, 0.75);
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    width: 80%;
+    z-index: 2;
+    border-radius: 5px;
+    color: #fff;
+    display: none;
+}
+
+.vri .vri-progress-bar .progress-bar-message-container {
+    margin: 0 0 10px;
+}
+
+.vri .vri-progress-bar .progress {
+    height: 2px;
+    background-image: initial;
+    background: #3a3a3a;
+    margin-bottom: 0;
+}
+
+.vri .container-local-remote-other {
+    position: relative;
+}
+
+.vri .vri-controls-wrapper .vri-controls-container .video-settings .dropdown-menu a {
+    color: #333;
+    font-size: 12px;
+    text-align: left;
+    margin: 0;
+}
+
+.vri .vri-controls-wrapper .vri-controls-container .video-settings .dropdown-menu a:hover {
+    color: #fff;
+}
+
+.vri .vri-controls-wrapper .vri-controls-container .video-settings .dropdown-menu .dropdown-header {
+    display: block;
+    padding: 3px 15px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #999999;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-align: left;
+}
+
+.vri-share-option-container {
+    margin: 20px 0;
+}
+
+.vri-share-option-container:first-child {
+    margin-top: 0
+}
+
+.vri-share-option-container:last-child {
+    margin-bottom: 0;
+}
+
+.vri .icon-red {
+    color: #e61919;
+}
+
+.vri .finish-icon {
+    transform: rotate(90deg);
+    display: inline-block;
+}
+
+.vri .media-available {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.vri .no-media-support,
+.vri .no-media-available {
+    margin: 50px auto 0;
+    padding: 50px 0;
+}
+
+.vri .no-media-support.no-media-support-box,
+.vri .no-media-available.no-media-available-box {
+    background: #dedede;
+    padding: 25px;
+    border-radius: 5px;
+    color: #5f5f5f;
+    text-shadow: none;
+    box-shadow: 0 0 120px hsla(0, 0%, 100%, .25);
+}
+
+.vri .ask-permissions-given {
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .vri .no-media-available {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .vri .no-media-available .icon {
+        text-align: center;
+    }
+}
+
+.vri .text-error {
+    color: #8a4242;
+}
+
+.vri .text-left {
+    text-align: left;
+}
+
+.vri .text-right {
+    text-align: right;
+}
+
+.vri .my-2 {
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.vri .mt-5 {
+    margin-top: 5em;
+}
+
+.vri .fs-2 {
+    font-size: 2em;
+}
+
+.vri .fs-5 {
+    font-size: 5em;
+}
+
+.vri .fs-7 {
+    font-size: 7em;
+}
+
+.vri .unread-count {
+    position: absolute;
+    left: 15px;
+}
+
+@media (max-width: 767px) {
+
+    .vri .vri-controls-wrapper .vri-controls-container {
+        top: 30px;
+        left: auto;
+        right: auto;
+        width: 100%;
+    }
+
+    .vri .vri-controls-wrapper .vri-controls-container .vri-company {
+        display: block;
+    }
+
+    .vri .vri-controls-wrapper .vri-controls-container .vri-controls {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
+        border-left: none;
+        padding-left: 0;
+    }
+
+}
+
+.vri .overlay-container {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ddd;
+    z-index: 1;
+}
+
+.vri .vri-session-information {
+    display: inline-block;
+    position: relative;
+    bottom: 25px;
+}
+
+@media only screen and (min-width : 768px) {
+    .vri .is-table-row {
+        display: table;
+    }
+    .vri .is-table-row > [class*="span"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .vri .is-table-row > [class*="span"].valign-bottom {
+        vertical-align: bottom;
+    }
+}
+
+.vri .info-container .title {
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.vri .info-container .info {
+    font-weight: bold;
+    color: #eee;
+    max-height: 100px;
+    overflow: auto;
+}
+
+.vri .info-container .info ul {
+    list-style: none;
+}
+
+.video-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.chat-container .chat {
+    min-width: 400px;
+}
+
+.vri .chat-container {
+    background-color: #e9edf0;
+}
+
+.vri .chat-container .chat {
+    min-width: 300px;
+}
+

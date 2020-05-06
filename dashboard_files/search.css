@@ -1,0 +1,161 @@
+/* SEARCH HEADER
+  _________ __                                       __  .__                     .__
+ /   _____//  |_  ____   ____   ____   ___________ _/  |_|__| ____   ____ _____  |  |
+ \_____  \\   __\/  _ \ /    \_/ __ \ /  ___/\__  \\   __\  |/  _ \ /    \\__  \ |  |
+ /        \|  | (  <_> )   |  \  ___/ \___ \  / __ \|  | |  (  <_> )   |  \/ __ \|  |__
+/_______  /|__|  \____/|___|  /\___  >____  >(____  /__| |__|\____/|___|  (____  /____/
+Sept 2013
+Styling the search dropdown within _nav-boostrap.gsp.
+*/
+
+#search_content.error {
+    background-color: #FFCCCC;
+    border-color: #B94A48;
+    color: #B94A48;
+}
+
+#search_content {
+    border: 1px solid #b3b8bb;
+    text-indent: 2px;
+    height: 18px;
+    width: 120px;
+    margin: 0;
+    float: left;
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    -moz-border-top-left-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+
+    -moz-border-top-right-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+
+    -moz-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    -moz-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    -moz-box-shadow: -1px -1px 1px #555;
+    -webkit-box-shadow: -1px -1px 1px #555;
+    box-shadow: -1px -1px 1px #555;
+
+}
+
+#search_content:focus {
+    outline: none;
+    color: #000000;
+}
+
+#search_dropdown {
+    display: none;
+    list-style-type: none;
+    width: 139px;
+    padding: 0;
+    margin: 0 3px 0 0;
+    position: absolute;
+    z-index: 1072;
+    top: 30px;
+    text-align: left;
+    background: #ffffff;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+
+    -moz-box-shadow: 1px 1px 1px 2px;
+    -webkit-box-shadow: 1px 1px 1px 2px;
+    box-shadow: 1px 1px 1px 2px;
+
+    -moz-border-top-left-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+
+    -moz-border-top-right-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+
+    -moz-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    -moz-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+}
+
+#search_dropdown li {
+    list-style-type: none;
+    padding: 7px 0 7px 22px;
+    margin: 0px;
+
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+
+}
+
+#search_dropdown li:hover {
+    cursor: pointer;
+}
+
+#search_dropdown a {
+    color: #333333;
+    text-decoration: none;
+}
+
+#search_dropdown #search-job {
+    background: #ffffff;
+    border-bottom: 1px solid #f5f5f6;
+}
+
+#search_dropdown #search-job:hover {
+    background: #0088cc;
+    color: #ffffff;
+}
+
+#search_dropdown #search-customer {
+    background: #ffffff;
+    border-bottom: 1px solid #f5f5f6;
+    border-top: 1px solid #d0d5d9;
+}
+
+#search_dropdown #search-customer:hover {
+    background: #0088cc;
+    color: #ffffff;
+}
+
+#search_dropdown #search-contact {
+    background: #ffffff;
+    border-bottom: 1px solid #f5f5f6;
+    border-top: 1px solid #d0d5d9;
+}
+
+#search_dropdown #search-contact:hover {
+    background: #0088cc;
+    color: #ffffff;
+}
+
+#search_dropdown #search-booking {
+    background: #ffffff;
+    border-top: 1px solid #d0d5d9;
+}
+
+#search_dropdown #search-booking:hover {
+    background: #0088cc;
+    color: #ffffff;
+}
+
+.chosen {
+    background-color: #0088cc !important;
+}
+
+.chosen a {
+    color: #fff !important;
+}
+
