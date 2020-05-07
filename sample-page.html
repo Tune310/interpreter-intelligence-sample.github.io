@@ -5852,6 +5852,7 @@ body.role-cont .booking-documents {
         </div>
     </div>
 </div>
+
 <div class="d-flex">
   <div class="sidebar">
     <div>
@@ -5880,8 +5881,8 @@ body.role-cont .booking-documents {
     </div>
     <div>
       <div class="d-flex align-items-center nav-item">
-        <img class="sidebar-icon" src="./assets/icons/icon_dashboard.svg" alt=""> 
-          Finanace 
+        <img class="sidebar-icon" src="./assets/icons/icon_finance.svg" alt=""> 
+          Finance 
         <img src="./assets/icons/small-down.svg" class="down-arrow" alt="down-arrow">
       </div>
       <ul>
@@ -5939,631 +5940,673 @@ body.role-cont .booking-documents {
       </ul>
     </div>
   </div>
-
-  <div class="container-fluid overflow-auto">
-
-      <div id="loader" style="display: none;"><p>Loading ...</p></div>
-
-      
-
-  <div id="popupErrorContainer" class="msg-modal hide">
-  </div>
-  <div id="popupSuccessContainer" class="msg-modal hide">
-  </div>
-  <div id="modalContainer" class="modal hide"></div>
-
-  <div class="row-fluid">
-      <!-- top row -->
-      <div class="span12 logo">
-
-          <div class="pull-left">
-              <img src="./sample-page_files/demo-agency-logo-small.png"> <h2 id="title">Languages Worldwide (Demo) Calls</h2>
-          </div>
-
-      </div> <!-- / top row -->
-  </div>
-
-
-  <div id="successContainer"></div>
-  <div id="errorContainer"></div>
-
-  <div id="main-region"><div><div class="portlet-header">
-      <div class="row-fluid">
-          <div class="span8">
-              Calls
-              <br>
-              <label class="control-label"><input type="checkbox" id="selectAll" class="selectAll" name="selectAll" autocomplete="off"> All calls (with current filters applied)</label>
-          </div>
-          <div class="span4">
-              <div class="filter pull-right">
-
-              <div><div class="btn-group reset-columns-container">
-      <button class="btn preset">Reset Columns</button>
-      <button class="btn dropdown-toggle list" data-toggle="dropdown">
-          <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu select-list" style="left: auto; right: 0;">
-
-      <div>
-
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="id" id="id" checked="" autocomplete="off"><label for="id"> ID</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="createdDate" id="createdDate" checked="" autocomplete="off"><label for="createdDate"> Created</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="createdTime" id="createdTime" checked="" autocomplete="off"><label for="createdTime"> Created Time</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="status" id="status" checked="" autocomplete="off"><label for="status"> App Status</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="callStatus" id="callStatus" checked="" autocomplete="off"><label for="callStatus"> Vendor Status</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="callDuration" id="callDuration" checked="" autocomplete="off"><label for="callDuration"> Call Duration</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="currentStep" id="currentStep" checked="" autocomplete="off"><label for="currentStep"> Current Step</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="operatorReason" id="operatorReason" checked="" autocomplete="off"><label for="operatorReason"> Operator Reason</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="job" id="job" checked="" autocomplete="off"><label for="job"> Job</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="customer" id="customer" checked="" autocomplete="off"><label for="customer"> Customer</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="client" id="client" checked="" autocomplete="off"><label for="client"> Client</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="language" id="language" checked="" autocomplete="off"><label for="language"> Language</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="gender" id="gender" autocomplete="off"><label for="gender"> Gender</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="intervieweeGender" id="intervieweeGender" autocomplete="off"><label for="intervieweeGender"> Interviewee Gender</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="callSid" id="callSid" autocomplete="off"><label for="callSid"> Call ID</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="accountSid" id="accountSid" autocomplete="off"><label for="accountSid"> Acc. ID</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="callFrom" id="callFrom" autocomplete="off"><label for="callFrom"> From</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="callTo" id="callTo" autocomplete="off"><label for="callTo"> To</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="apiVersion" id="apiVersion" autocomplete="off"><label for="apiVersion"> API</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="direction" id="direction" autocomplete="off"><label for="direction"> Direction</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="forwardedFrom" id="forwardedFrom" autocomplete="off"><label for="forwardedFrom"> Fwd. From</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="callerName" id="callerName" autocomplete="off"><label for="callerName"> Caller Name</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="fromCity" id="fromCity" autocomplete="off"><label for="fromCity"> From City</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="fromState" id="fromState" autocomplete="off"><label for="fromState"> From State</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="fromZip" id="fromZip" autocomplete="off"><label for="fromZip"> From Zip</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="fromCountry" id="fromCountry" autocomplete="off"><label for="fromCountry"> From Country</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="toCity" id="toCity" autocomplete="off"><label for="toCity"> To City</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="toState" id="toState" autocomplete="off"><label for="toState"> To State</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="toZip" id="toZip" autocomplete="off"><label for="toZip"> To Zip</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="toCountry" id="toCountry" autocomplete="off"><label for="toCountry"> To Country</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="sipDomain" id="sipDomain" autocomplete="off"><label for="sipDomain"> Sip Domain</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="sipUsername" id="sipUsername" autocomplete="off"><label for="sipUsername"> SIP Username</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="sipCallId" id="sipCallId" autocomplete="off"><label for="sipCallId"> SIP Called ID</label></a></li>
-
-  </div><div>
-
-
-  <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="sipSourceIp" id="sipSourceIp" autocomplete="off"><label for="sipSourceIp"> SIP Source IP</label></a></li>
-
-  </div></ul>
-  </div>
-  </div></div>
-              &nbsp;
-              <div class="bulk-actions pull-right">
-
-              </div>
-          </div>
-      </div>
-  </div>
-
-  <div class="grid">
-
-  <table class="backgrid"><thead><tr><th><a><b class="sort-caret"></b></a></th><th><a>ID<b class="sort-caret"></b></a></th><th class="descending"><a>Created<b class="sort-caret"></b></a></th><th class="descending"><a>Created Time<b class="sort-caret"></b></a></th><th><a>App Status<b class="sort-caret"></b></a></th><th><a>Vendor Status<b class="sort-caret"></b></a></th><th><a>Call Duration<b class="sort-caret"></b></a></th><th><a>Current Step<b class="sort-caret"></b></a></th><th><a>Operator Reason<b class="sort-caret"></b></a></th><th><a>Job<b class="sort-caret"></b></a></th><th><a>Customer<b class="sort-caret"></b></a></th><th><a>Client<b class="sort-caret"></b></a></th><th><a>Language<b class="sort-caret"></b></a></th></tr><tr><th class="action-cell-right"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="datetime-cell editor"><input type="text" id="dp1588622056916" class="hasDatepicker" autocomplete="off"></th><th class="datetime-cell"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th></tr></thead><tbody><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
+  <div class="d-flex flex-column overflow-auto">
+    <div class="submenu-header">
+      <ul class="submenu-list">
+        <li>
+          <a href="#">
+            <span>Jobs</span>
           </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1743</td><td class="datetime-cell"><span data-original-title="05/01/20">05/01/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">12:32 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2616080</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/icons/icon_calendar_dark.svg" alt="Calendar">
+            <span>Calendar</span>
           </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1742</td><td class="datetime-cell"><span data-original-title="05/01/20">05/01/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">12:31 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2616080</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/icons/icon_tasks.svg" alt="Timeline">
+            <span>Timeline</span>
           </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1741</td><td class="datetime-cell"><span data-original-title="05/01/20">05/01/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">12:31 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2616080</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/icons/icon_location.svg" alt="Map">
+            <span>Map</span>
           </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1740</td><td class="datetime-cell"><span data-original-title="05/01/20">05/01/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">12:28 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2616080</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/icons/icon_dashboard.svg" alt="Dashboard">
+            <span>Dashboard</span>
           </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1739</td><td class="datetime-cell"><span data-original-title="05/01/20">05/01/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">12:28 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2616080</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
+        </li>
+        <li>
+          <a href="#">
+            <span>
+              Jobs View
+            </span>
           </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1738</td><td class="datetime-cell"><span data-original-title="04/28/20">04/28/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">11:35 AM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2598688</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1737</td><td class="datetime-cell"><span data-original-title="04/28/20">04/28/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">11:35 AM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2598688</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1295</td><td class="datetime-cell"><span data-original-title="04/15/20">04/15/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">6:06 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">completed</td><td class="string-cell">16</td><td class="string-cell">wrapperAccessCode</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1294</td><td class="datetime-cell"><span data-original-title="04/15/20">04/15/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">6:06 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">completed</td><td class="string-cell">0</td><td class="string-cell">wrapper</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1241</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">11:46 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperLanguageCode</td><td class="string-cell"></td><td class="string-cell">2609225</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell">Russian</td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1240</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">11:45 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">completed</td><td class="string-cell"></td><td class="string-cell">wrapperPinClient</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1239</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">11:41 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperLanguageCode</td><td class="string-cell"></td><td class="string-cell">2609221</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell">Russian</td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1238</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">11:39 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperLanguageCode</td><td class="string-cell"></td><td class="string-cell">2609218</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell">Russian</td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1237</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">11:36 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperLanguageCode</td><td class="string-cell"></td><td class="string-cell">2609215</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell">Russian</td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1236</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">11:32 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperLanguageCode</td><td class="string-cell"></td><td class="string-cell">2609212</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell">Russian</td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1235</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">11:31 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperLanguageCode</td><td class="string-cell"></td><td class="string-cell">2609211</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell">Russian</td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1234</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">11:29 PM</span></td><td class="string-cell">operator</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperPinClient</td><td class="string-cell">too many retries</td><td class="string-cell"></td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1233</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">11:23 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">completed</td><td class="string-cell"></td><td class="string-cell">wrapper</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1026</td><td class="datetime-cell"><span data-original-title="04/12/20">04/12/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">7:46 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2606396</td><td class="string-cell">Marin General</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1025</td><td class="datetime-cell"><span data-original-title="04/12/20">04/12/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">2:25 AM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2606366</td><td class="string-cell">Marin General</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1024</td><td class="datetime-cell"><span data-original-title="04/11/20">04/11/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">10:04 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2606357</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1023</td><td class="datetime-cell"><span data-original-title="04/11/20">04/11/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">10:04 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2606356</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">1022</td><td class="datetime-cell"><span data-original-title="04/10/20">04/10/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">9:49 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">completed</td><td class="string-cell">42</td><td class="string-cell">wrapperAccessCode</td><td class="string-cell"></td><td class="string-cell">2606099</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">911</td><td class="datetime-cell"><span data-original-title="04/09/20">04/09/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">5:57 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2604910</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
-      <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
-              <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
-              <!-- dropdown menu links -->
-          </ul>
-      </div>
-  </div>
-  </td><td class="string-cell">849</td><td class="datetime-cell"><span data-original-title="04/08/20">04/08/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
-  Expected:  - ">8:41 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2604299</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell"></td><td class="string-cell"></td></tr></tbody></table></div>
-  <div class="row-fluid">
-      <div class="span2">
-          <div class="export"></div>
-      </div>
-      <div class="span8">
-          <div class="paginator"><div class="backgrid-paginator"><ul>
-      
-          <li class="disabled">
-              <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">《</a>
-          </li>
-      
-          <li class="disabled">
-              <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">〈</a>
-          </li>
-      
-          <li class="active">
-              <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 1">1</a>
-          </li>
-      
-          <li>
-              <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 2">2</a>
-          </li>
-      
-          <li>
-              <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 3">3</a>
-          </li>
-      
-          <li>
-              <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 4">4</a>
-          </li>
-      
-          <li>
-              <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 5">5</a>
-          </li>
-      
-          <li>
-              <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 6">6</a>
-          </li>
-      
-          <li>
-              <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 7">7</a>
-          </li>
-      
-          <li>
-              <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 8">8</a>
-          </li>
-      
-          <li>
-              <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 9">9</a>
-          </li>
-      
-          <li>
-              <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">〉</a>
-          </li>
-      
-          <li>
-              <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">》</a>
-          </li>
-      
-      <li>
+        </li>
+      </ul>
+    </div>
 
-          <select class="input-mini pageSize">
-              <option value="10">10</option>
-              <option value="25" selected="">25</option>
-              <option value="50">50</option>
-              <option value="100">100</option>
-              <option value="250">250</option>
-              <option value="500">500</option>
-              <option value="1000">1000</option>
-          </select>
+    <div class="container-fluid overflow-auto">
 
-          <input type="text" class="currentPage" value="1" style="width: 25px">
+        <div id="loader" style="display: none;"><p>Loading ...</p></div>
 
-      </li>
-  </ul>
-  <div>Page <strong>1</strong> of <strong>9</strong> (<strong>225</strong> Total Records)</div>
-  </div></div>
-      </div>
+        
 
-  </div>
-  </div></div>
+    <div id="popupErrorContainer" class="msg-modal hide">
+    </div>
+    <div id="popupSuccessContainer" class="msg-modal hide">
+    </div>
+    <div id="modalContainer" class="modal hide"></div>
+
+    <div class="row-fluid">
+        <!-- top row -->
+        <div class="span12 logo">
+
+            <div class="pull-left">
+                <img src="./sample-page_files/demo-agency-logo-small.png"> <h2 id="title">Languages Worldwide (Demo) Calls</h2>
+            </div>
+
+        </div> <!-- / top row -->
+    </div>
 
 
+    <div id="successContainer"></div>
+    <div id="errorContainer"></div>
 
-  </div> <!-- /container -->
+    <div id="main-region"><div><div class="portlet-header">
+        <div class="row-fluid">
+            <div class="span8">
+                Calls
+                <br>
+                <label class="control-label"><input type="checkbox" id="selectAll" class="selectAll" name="selectAll" autocomplete="off"> All calls (with current filters applied)</label>
+            </div>
+            <div class="span4">
+                <div class="filter pull-right">
 
-  <!-- overlay for vri conference -->
-  <div class="vri-overlay" style="display: none;">
+                <div><div class="btn-group reset-columns-container">
+        <button class="btn preset">Reset Columns</button>
+        <button class="btn dropdown-toggle list" data-toggle="dropdown">
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu select-list" style="left: auto; right: 0;">
+
+        <div>
+
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="id" id="id" checked="" autocomplete="off"><label for="id"> ID</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="createdDate" id="createdDate" checked="" autocomplete="off"><label for="createdDate"> Created</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="createdTime" id="createdTime" checked="" autocomplete="off"><label for="createdTime"> Created Time</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="status" id="status" checked="" autocomplete="off"><label for="status"> App Status</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="callStatus" id="callStatus" checked="" autocomplete="off"><label for="callStatus"> Vendor Status</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="callDuration" id="callDuration" checked="" autocomplete="off"><label for="callDuration"> Call Duration</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="currentStep" id="currentStep" checked="" autocomplete="off"><label for="currentStep"> Current Step</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="operatorReason" id="operatorReason" checked="" autocomplete="off"><label for="operatorReason"> Operator Reason</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="job" id="job" checked="" autocomplete="off"><label for="job"> Job</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="customer" id="customer" checked="" autocomplete="off"><label for="customer"> Customer</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="client" id="client" checked="" autocomplete="off"><label for="client"> Client</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="coluddmn" name="language" id="language" checked="" autocomplete="off"><label for="language"> Language</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="gender" id="gender" autocomplete="off"><label for="gender"> Gender</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="intervieweeGender" id="intervieweeGender" autocomplete="off"><label for="intervieweeGender"> Interviewee Gender</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="callSid" id="callSid" autocomplete="off"><label for="callSid"> Call ID</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="accountSid" id="accountSid" autocomplete="off"><label for="accountSid"> Acc. ID</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="callFrom" id="callFrom" autocomplete="off"><label for="callFrom"> From</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="callTo" id="callTo" autocomplete="off"><label for="callTo"> To</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="apiVersion" id="apiVersion" autocomplete="off"><label for="apiVersion"> API</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="direction" id="direction" autocomplete="off"><label for="direction"> Direction</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="forwardedFrom" id="forwardedFrom" autocomplete="off"><label for="forwardedFrom"> Fwd. From</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="callerName" id="callerName" autocomplete="off"><label for="callerName"> Caller Name</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="fromCity" id="fromCity" autocomplete="off"><label for="fromCity"> From City</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="fromState" id="fromState" autocomplete="off"><label for="fromState"> From State</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="fromZip" id="fromZip" autocomplete="off"><label for="fromZip"> From Zip</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="fromCountry" id="fromCountry" autocomplete="off"><label for="fromCountry"> From Country</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="toCity" id="toCity" autocomplete="off"><label for="toCity"> To City</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="toState" id="toState" autocomplete="off"><label for="toState"> To State</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="toZip" id="toZip" autocomplete="off"><label for="toZip"> To Zip</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="toCountry" id="toCountry" autocomplete="off"><label for="toCountry"> To Country</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="sipDomain" id="sipDomain" autocomplete="off"><label for="sipDomain"> Sip Domain</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="sipUsername" id="sipUsername" autocomplete="off"><label for="sipUsername"> SIP Username</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="sipCallId" id="sipCallId" autocomplete="off"><label for="sipCallId"> SIP Called ID</label></a></li>
+
+    </div><div>
+
+
+    <li class="secured  secured-comp " style="display: list-item;"><a class="column"><input type="checkbox" class="colccumn" name="sipSourceIp" id="sipSourceIp" autocomplete="off"><label for="sipSourceIp"> SIP Source IP</label></a></li>
+
+    </div></ul>
+    </div>
+    </div></div>
+                &nbsp;
+                <div class="bulk-actions pull-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid">
+
+    <table class="backgrid"><thead><tr><th><a><b class="sort-caret"></b></a></th><th><a>ID<b class="sort-caret"></b></a></th><th class="descending"><a>Created<b class="sort-caret"></b></a></th><th class="descending"><a>Created Time<b class="sort-caret"></b></a></th><th><a>App Status<b class="sort-caret"></b></a></th><th><a>Vendor Status<b class="sort-caret"></b></a></th><th><a>Call Duration<b class="sort-caret"></b></a></th><th><a>Current Step<b class="sort-caret"></b></a></th><th><a>Operator Reason<b class="sort-caret"></b></a></th><th><a>Job<b class="sort-caret"></b></a></th><th><a>Customer<b class="sort-caret"></b></a></th><th><a>Client<b class="sort-caret"></b></a></th><th><a>Language<b class="sort-caret"></b></a></th></tr><tr><th class="action-cell-right"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="datetime-cell editor"><input type="text" id="dp1588622056916" class="hasDatepicker" autocomplete="off"></th><th class="datetime-cell"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th><th class="string-cell editor"><input type="text" autocomplete="off"></th></tr></thead><tbody><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1743</td><td class="datetime-cell"><span data-original-title="05/01/20">05/01/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">12:32 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2616080</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1742</td><td class="datetime-cell"><span data-original-title="05/01/20">05/01/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">12:31 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2616080</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1741</td><td class="datetime-cell"><span data-original-title="05/01/20">05/01/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">12:31 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2616080</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1740</td><td class="datetime-cell"><span data-original-title="05/01/20">05/01/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">12:28 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2616080</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1739</td><td class="datetime-cell"><span data-original-title="05/01/20">05/01/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">12:28 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2616080</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1738</td><td class="datetime-cell"><span data-original-title="04/28/20">04/28/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">11:35 AM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2598688</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1737</td><td class="datetime-cell"><span data-original-title="04/28/20">04/28/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">11:35 AM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2598688</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1295</td><td class="datetime-cell"><span data-original-title="04/15/20">04/15/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">6:06 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">completed</td><td class="string-cell">16</td><td class="string-cell">wrapperAccessCode</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1294</td><td class="datetime-cell"><span data-original-title="04/15/20">04/15/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">6:06 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">completed</td><td class="string-cell">0</td><td class="string-cell">wrapper</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1241</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">11:46 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperLanguageCode</td><td class="string-cell"></td><td class="string-cell">2609225</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell">Russian</td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1240</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">11:45 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">completed</td><td class="string-cell"></td><td class="string-cell">wrapperPinClient</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1239</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">11:41 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperLanguageCode</td><td class="string-cell"></td><td class="string-cell">2609221</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell">Russian</td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1238</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">11:39 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperLanguageCode</td><td class="string-cell"></td><td class="string-cell">2609218</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell">Russian</td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1237</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">11:36 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperLanguageCode</td><td class="string-cell"></td><td class="string-cell">2609215</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell">Russian</td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1236</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">11:32 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperLanguageCode</td><td class="string-cell"></td><td class="string-cell">2609212</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell">Russian</td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1235</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">11:31 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperLanguageCode</td><td class="string-cell"></td><td class="string-cell">2609211</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell">Russian</td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1234</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">11:29 PM</span></td><td class="string-cell">operator</td><td class="string-cell">in-progress</td><td class="string-cell"></td><td class="string-cell">wrapperPinClient</td><td class="string-cell">too many retries</td><td class="string-cell"></td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell">Endocronology</td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1233</td><td class="datetime-cell"><span data-original-title="04/14/20">04/14/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">11:23 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">completed</td><td class="string-cell"></td><td class="string-cell">wrapper</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1026</td><td class="datetime-cell"><span data-original-title="04/12/20">04/12/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">7:46 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2606396</td><td class="string-cell">Marin General</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1025</td><td class="datetime-cell"><span data-original-title="04/12/20">04/12/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">2:25 AM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2606366</td><td class="string-cell">Marin General</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1024</td><td class="datetime-cell"><span data-original-title="04/11/20">04/11/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">10:04 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2606357</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1023</td><td class="datetime-cell"><span data-original-title="04/11/20">04/11/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">10:04 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2606356</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">1022</td><td class="datetime-cell"><span data-original-title="04/10/20">04/10/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">9:49 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell">completed</td><td class="string-cell">42</td><td class="string-cell">wrapperAccessCode</td><td class="string-cell"></td><td class="string-cell">2606099</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">911</td><td class="datetime-cell"><span data-original-title="04/09/20">04/09/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">5:57 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2604910</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell"></td><td class="string-cell"></td></tr><tr><td class="action-cell-right"><div class="btn-group-wrapper">
+        <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" class="widget-view-details"><i class="icon-fullscreen"></i> View Details</a></li>
+                <!-- dropdown menu links -->
+            </ul>
+        </div>
+    </div>
+    </td><td class="string-cell">849</td><td class="datetime-cell"><span data-original-title="04/08/20">04/08/20</span></td><td class="datetime-cell"><span style="display: inline;" data-original-title="undefined&lt;br&gt;&lt;/span&gt;
+    Expected:  - ">8:41 PM</span></td><td class="string-cell">inprogress</td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell"></td><td class="string-cell">2604299</td><td class="string-cell">St. Marys Medical Center</td><td class="string-cell"></td><td class="string-cell"></td></tr></tbody></table></div>
+    <div class="row-fluid">
+        <div class="span2">
+            <div class="export"></div>
+        </div>
+        <div class="span8">
+            <div class="paginator"><div class="backgrid-paginator"><ul>
+        
+            <li class="disabled">
+                <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">《</a>
+            </li>
+        
+            <li class="disabled">
+                <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">〈</a>
+            </li>
+        
+            <li class="active">
+                <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 1">1</a>
+            </li>
+        
+            <li>
+                <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 2">2</a>
+            </li>
+        
+            <li>
+                <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 3">3</a>
+            </li>
+        
+            <li>
+                <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 4">4</a>
+            </li>
+        
+            <li>
+                <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 5">5</a>
+            </li>
+        
+            <li>
+                <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 6">6</a>
+            </li>
+        
+            <li>
+                <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 7">7</a>
+            </li>
+        
+            <li>
+                <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 8">8</a>
+            </li>
+        
+            <li>
+                <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#" title="No. 9">9</a>
+            </li>
+        
+            <li>
+                <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">〉</a>
+            </li>
+        
+            <li>
+                <a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">》</a>
+            </li>
+        
+        <li>
+
+            <select class="input-mini pageSize">
+                <option value="10">10</option>
+                <option value="25" selected="">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="250">250</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+            </select>
+
+            <input type="text" class="currentPage" value="1" style="width: 25px">
+
+        </li>
+    </ul>
+    <div>Page <strong>1</strong> of <strong>9</strong> (<strong>225</strong> Total Records)</div>
+    </div></div>
+        </div>
+
+    </div>
+    </div></div>
+
+
+
+    </div> <!-- /container -->
+
+    <!-- overlay for vri conference -->
+    <div class="vri-overlay" style="display: none;">
+    </div>
+
+
+        <div id="global-chat-container"></div>
+
   </div>
-
-
-      <div id="global-chat-container"></div>
-
 </div>
 <div class="footer clearfix">
     <div class="container-fluid">

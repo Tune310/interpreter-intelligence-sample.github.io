@@ -33,12 +33,51 @@ body {
   align-items: center;
 }
 
+.submenu-header .submenu-list {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  border-bottom: 1px solid lightgrey;
+  margin: 0px 17px 9px 17px;
+  list-style-type: none;
+}
+.submenu-header .submenu-list li {
+  margin-right: 10px;
+  padding-bottom: 6px;
+  font-size: 14px;
+  margin-bottom: -5px;
+  border-bottom: 2px solid transparent;
+}
+.submenu-header .submenu-list li.active {
+  border-bottom: 2px solid purple;
+}
+.submenu-header .submenu-list li.active img {
+  filter: brightness(0.4);
+}
+.submenu-header .submenu-list li.active span {
+  color: #333A41;
+}
+.submenu-header .submenu-list li:last-child {
+  margin-left: auto;
+  margin-right: 0px;
+}
+.submenu-header .submenu-list li a {
+  display: flex;
+  color: #808495;
+}
+.submenu-header .submenu-list li a:hover {
+  text-decoration: none;
+}
+.submenu-header img {
+  margin-right: 5px;
+}
+
 .sidebar {
   width: 0px;
   position: sticky;
   top: 48px;
   transition: width 80ms;
-  box-shadow: 5px 3px 5px #0000007B;
+  box-shadow: 5px 1px 5px #0000007B;
   background-color: #666B6F;
 }
 .sidebar > div {
@@ -160,6 +199,10 @@ body {
   position: absolute;
   transform: rotate(-45deg);
   width: 24px;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=new.css.map */

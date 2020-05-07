@@ -20,4 +20,9 @@ $(document).ready(function() {
     $('.sidebar ul li').removeClass('active-item')
     $(this).parent().addClass('active-item')
   })
+
+  $('.submenu-header .submenu-list li').on('click', function() {
+    $('.submenu-header .submenu-list li').removeClass('active');
+    $(this).addClass('active');
+  })
 });
