@@ -30,7 +30,7 @@ body {
   }
   
   .brand {
-    padding: 8px 20px 20px !important;
+    padding: 8px 15px 20px !important;
   }
 
   .container-fluid {
@@ -54,6 +54,7 @@ body {
     border-bottom: 1px solid #50555B;
     border-bottom-width: 2px;
     font-family: Helvetica Neue, Regular;
+    font-size: 14px;
 
     .sidebar-icon {
       margin-right: 10px;
@@ -184,8 +185,4 @@ body {
   position: absolute;
   transform: rotate(-45deg);
   width: 24px;	
-}
-
-.footer ~ {
-  margin-bottom: 10px;
 }
