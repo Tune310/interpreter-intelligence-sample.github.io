@@ -181,6 +181,12 @@ body {
 .sidebar > div.active {
   display: block;
 }
+.sidebar > div.active a {
+  color: #F5F6FA;
+}
+.sidebar > div.active a:hover {
+  text-decoration: none;
+}
 .sidebar > div.active > div.nav-item {
   padding: 12px;
 }
@@ -194,6 +200,12 @@ body {
   height: 100%;
   margin-bottom: -15px;
 }
+.sidebar .nav-item {
+  padding: 12px;
+}
+.sidebar .nav-item:hover {
+  background-color: #2B2727;
+}
 .sidebar ul {
   list-style-type: none;
 }
@@ -205,7 +217,6 @@ body {
   cursor: pointer;
   margin-right: 20px;
   float: left;
-  padding: 10px 0px 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -216,24 +227,14 @@ body {
   border-radius: 4px;
   height: 2px;
   width: 22px;
-  background: #000;
+  background: #fefefe;
   position: relative;
   display: block;
   content: "";
   transition: all 300ms ease-in;
 }
-.hamburger-toggle span {
-  background: #e7e7e7 !important;
-}
-.hamburger-toggle:hover span {
-  cursor: pointer;
-  background-color: #CECFD0 !important;
-}
 .hamburger-toggle .line-1, .hamburger-toggle .line-2 {
-  margin-bottom: 5px;
-}
-.hamburger-toggle.active .line-2 {
-  background-color: transparent !important;
+  margin-bottom: 6px;
 }
 .hamburger-toggle.active .line-1 {
   background: #fefefe;
@@ -248,6 +249,19 @@ body {
   position: absolute;
   transform: rotate(-45deg);
   width: 24px;
+}
+
+.hamburger-toggle span {
+  background: #e7e7e7;
+}
+
+.hamburger-toggle:hover span {
+  cursor: pointer;
+  background-color: #CECFD0;
+}
+
+.hamburger-toggle.active .line-2 {
+  background-color: transparent !important;
 }
 
 .flex-column {

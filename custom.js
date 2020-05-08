@@ -21,7 +21,7 @@ $(document).ready(function() {
     $(this).parent().addClass('active-item')
   })
 
-  $('.submenu-header .submenu-list li').on('click', function() {
+  $('.submenu-header .submenu-list li:not(":last-child")').on('click', function() {
     $('.submenu-header .submenu-list li').removeClass('active');
     $(this).addClass('active');
   })
