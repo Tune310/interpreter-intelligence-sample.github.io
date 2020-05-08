@@ -5803,24 +5803,16 @@ body.role-cont .booking-documents {
 </div> <!-- /nav -->
 
 
-    <div class="nav pull-right" style="padding-top:5px;">
-        <div id="business-unit-container"><select class="input-block-level" name="businessUnit" id="businessUnit">
-    <option value="">[All]</option>
-<option value="11">Central</option>
-<option value="90">North</option>
-<option value="10">West</option>
-</select>
-</div>
-    </div>
-
-
-<div class="nav-collapse no-collapse">
+<div class="nav-collapse no-collapse mg-lft-auto">
     <ul class="nav pull-right">
         
-            <li>
+            <li class="list-item-search-header">
                 <form class="navbar-search pull-left" id="search_form" name="search_form" action="http://localhost:8080/interpreter-direct" method="post">
+                  <div class="form-control search-header-container">
+                    <img src="./assets/icons/header_icon_search.svg" alt="Search">
                     <input id="search_type" name="search_type" value="visit" type="hidden" autocomplete="off">
-                    <input type="text" name="id" id="search_content" class="search-query span2" placeholder="Job #" tabindex="1" autocomplete="off">
+                    <input type="text" name="id" id="search_content" class="search-query span2 search-content-header" placeholder="Search..." tabindex="1" autocomplete="off">
+                  </div>  
                     <ul id="search_dropdown">
                         <li id="search-job"><a href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">Job</a></li>
                         
@@ -5832,9 +5824,14 @@ body.role-cont .booking-documents {
                         
                     </ul>
                 </form>
-            </li>
-            <li class="divider-vertical"></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">agency.admin@interpreterintelligence.com <i class="icon-white icon-user"></i><b class="caret"></b></a>
+            </li>                              
+            </div>
+            <div class="header-icons-container">
+              <a href="#"><img src="./assets/icons/header_icon_messages.svg" alt="Messages"></a>
+              <a href="#"><img src="./assets/icons/header_icon_mail.svg" alt="Mail"></a>
+              <a href="#"><img src="./assets/icons/header_icon_alerts.svg" alt="Alerts"></a>
+            </div>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="http://localhost:8080/interpreter-direct/company/ivr?_debugResources=y#">Conor Power <img src="./assets/icons/small-down.svg" class="mg-lft-5 profile-dropdown-arrow" alt="Drop Down Arrow"></a>
                 <ul class="dropdown-menu">
                     <li><a title="Edit Profile" href="http://localhost:8080/interpreter-direct/user/profile">User Profile</a></li>
                     <li class="divider"></li>
@@ -5845,7 +5842,9 @@ body.role-cont .booking-documents {
                     <li><a href="http://localhost:8080/interpreter-direct/logout">Logout</a></li>
                 </ul>
             </li>
-        
+            <div class="profile-image">
+              <img src="./assets/images/profile-avatar.png" alt="">
+            </div>
         
     </ul>
 </div>
@@ -5945,6 +5944,7 @@ body.role-cont .booking-documents {
       <ul class="submenu-list">
         <li>
           <a href="#">
+            <img src="./assets/icons/icon_jobs.svg" alt="Jobs">
             <span>Jobs</span>
           </a>
         </li>
