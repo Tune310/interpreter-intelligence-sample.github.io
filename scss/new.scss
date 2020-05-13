@@ -12,8 +12,10 @@ body {
 .navbar {
 
   .navbar-inner {
+    background: #075FA1;
     height: 60px !important;
   }
+
   .search-header-container {
     padding: 0px 0px 0px 5px!important;
 
@@ -63,10 +65,6 @@ body {
   &.navbar-fixed-top {
     position: sticky !important;
     top: 0;
-  }
-  .navbar-inner {
-    background: #075FA1;
-    height: 48px;
   }
 
   .logo {
