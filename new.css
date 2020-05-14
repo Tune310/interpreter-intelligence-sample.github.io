@@ -106,7 +106,7 @@ body {
   border-bottom: 2px solid transparent;
 }
 .submenu-header .submenu-list li span {
-  font-size: 15px;
+  font-size: 14px;
 }
 .submenu-header .submenu-list li:hover {
   border-bottom: 2px solid black;
@@ -118,7 +118,6 @@ body {
   color: #333A41;
 }
 .submenu-header .submenu-list li .icon-dashboard {
-  margin-right: 4px;
   width: 17px;
   height: 18px;
 }
